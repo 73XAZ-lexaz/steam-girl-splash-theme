@@ -68,7 +68,10 @@ WantedBy=plasma-workspace.target
 systemctl --user enable splash-delay.service
 ```
 
-#now when you login in again the splash will have time to play the whole thing before loading to desktop
+
+5.Restart Your PC
+
+
 
 
 #### Note
@@ -80,4 +83,9 @@ systemctl --user disable splash-delay.service
 
 
 
+### Uninstall
+```sh
+systemctl --user disable splash-delay.service
 
+rm -r -f ~/.local/share/plasma/look-and-feel/steam-girl-splash-theme/ ~/.config/systemd/user/plasma-workspace.target.wants/ ~/.config/systemd/user/timers.target.wants/ ~/.config/systemd/user/splash-delay.service
+```
