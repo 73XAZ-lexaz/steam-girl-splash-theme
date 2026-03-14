@@ -6,6 +6,16 @@
 ## but all the code in the project is free for people to fork and do as they will with (as it was developed by me)
 
 
+
+
+
+
+
+
+
+
+
+## IMPORANT
 I couldn't figure out how to add a delay to the Splash Screen code to prevent the Desktop from loading instantly but I did figure out how to force delay the plasma 5 desktop using a startup command.
 
 
