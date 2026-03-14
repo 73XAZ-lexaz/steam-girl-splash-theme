@@ -1,7 +1,7 @@
 I couldn't figure out how to add a delay to the Splash Screen code to prevent the Desktop from loading instantly but I did figure out how to force delay the plasma 5 desktop using a startup command.
 
 
-### Install to settings setup
+### Install to settings
 
 To install the Splash screen you can use:
 ```sh
@@ -9,7 +9,7 @@ mv ~"PATH_TO_THE_SPLASH_SCREEN_LOCATION" ~/.local/share/plasma/look-and-feel/
 ```
 
 
-## To setup the Desktop delay so that the whole thing play without instantly loading the desktop
+## To setup the Desktop delay so that the whole thing plays without instantly loading the desktop
 
 1. type "nano ~/.nanorc" in the termnial.
 
