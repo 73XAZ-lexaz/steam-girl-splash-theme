@@ -31,5 +31,17 @@ ________________________________________________________________________________
 
 
 
+To disable the nano config just simple type "systemctl --user disable splash-delay.service" into the terminal
 
-P.S. To disable the nano config just simple type "systemctl --user disable splash-delay.service" into the terminal
+
+
+
+
+To install the Splash screen you can use 
+
+mv "PATH_TO_THE_SPLASH_SCREEN" ~/.local/share/plasma/look-and-feel/
+
+
+If you simple just want to copy it use
+
+cp -r "PATH_TO_THE_SPLASH_SCREEN" ~/.local/share/plasma/look-and-feel/
