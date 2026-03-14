@@ -13,7 +13,7 @@ Steps to setup the delay to let the Splash play all the way through.
 ## To setup the Desktop load delay to let the whole thing play without instantly loading the desktop
 
 Nano Config:
-'''sh
+```sh
 [Unit]
 Description=Wait for Splash Animation
 Before=plasma-workspace.target
@@ -25,16 +25,16 @@ RemainAfterExit=yes
 
 [Install]
 WantedBy=plasma-workspace.target
-'''
+```
 
 3. save the nano config (DON'T RENAME IT)
 
 4. Enable the nano config
 
 Enable the nano config:
-'''sh
+```sh
 systemctl --user enable splash-delay.service
-'''
+```
 
 #now when you login in again the splash will have time to play the whole thing before loading to desktop
 
@@ -42,15 +42,15 @@ systemctl --user enable splash-delay.service
 #### Note
 
 To disable the nano config type:
-'''sh
+```sh
 systemctl --user disable splash-delay.service
-'''
+```
 
 ### Install to settings setup
 
 To install the Splash screen you can use:
-'''sh
+```sh
 mv "PATH_TO_THE_SPLASH_SCREEN" ~/.local/share/plasma/look-and-feel/
-'''
+```
 
 
