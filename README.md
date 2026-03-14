@@ -1,4 +1,12 @@
+
+# All Rights to the image and audio in the project belong to VALVE CORPORATION
+
+## but all the code in the progect is free for people to fork and do as they will with (as it was developed by me)
+
+
 I couldn't figure out how to add a delay to the Splash Screen code to prevent the Desktop from loading instantly but I did figure out how to force delay the plasma 5 desktop using a startup command.
+
+
 
 
 ### Install to settings
