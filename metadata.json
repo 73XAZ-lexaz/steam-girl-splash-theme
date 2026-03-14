@@ -1,0 +1,21 @@
+{
+	"KPlugin": {
+		"Authors": [
+			{
+				"Email": "jaxxvert@gmail.com",
+				"Name": "lexaz"
+			}
+		],
+		"Category": "",
+		"Description": "Steam girl splash screen KDE 5",
+		"Id": "steam-girl-splash-theme",
+		"License": "GPLv2+",
+		"Name": "Steam Girl",
+		"ServiceTypes": ["Plasma/LookAndFeel"],
+		"Version": "1.0",
+		"Website": "https://github.com/73XAZ-lexaz/steam-girl-splash-theme"
+	},
+	"Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+	"X-KDE-ParentApp": "",
+	"X-Plasma-MainScript": "defaults"
+}
