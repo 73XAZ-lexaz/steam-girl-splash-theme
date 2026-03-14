@@ -1,5 +1,7 @@
 
-# All Rights to the image and audio in the project belong to Valve Corporation
+# All Rights to the image, video and audio in this project belong to Valve Corporation
+
+### Please do not sell or distribute for legal resons
 
 ## but all the code in the project is free for people to fork and do as they will with (as it was developed by me)
 
