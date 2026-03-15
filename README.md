@@ -25,7 +25,7 @@ I couldn't figure out how to add a delay to the Splash Screen code to prevent th
 
 ### Discovered a BUG with the DELAY SCRIPT SPAMMING SYSLOG LOGS please see
 
-> 3/14/26 9:49pm Should be resovled if Issue persist Please Vist Issues for update and fixes on the problem
+> 3/14/26 9:49pm Should be resovled if Issue persist Please Vist Issues for updates and patch fixes on the problem
 
 
 
