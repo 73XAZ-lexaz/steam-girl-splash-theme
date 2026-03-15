@@ -1,41 +1,58 @@
-import QtQuick 2.15
-import QtQuick.Window 2.2
-import QtMultimedia 5.15
+import QtQuick
+import QtQuick.Window
+import QtMultimedia
 
 Rectangle {
     id: root
     height: Screen.height
     width: Screen.width
+    color:"black"
 
+    property int stage
 
-AnimatedImage {
+    // This images loads the first frame of the video, so that we don't have a blank screen while the video is loading. It will be hidden once the video starts playing.
+    Image {
         id: backgroundImage
-        source: "images/steamgirl.gif"
+        source: Qt.resolvedUrl("images/start.png")
         anchors.fill: parent
-        paused: false
-        smooth: true
-        visible: true
+        // This prevents the 16:10 picture from being stretched to fit the 16:9 screen, and instead crops it to fill the screen while maintaining its aspect ratio.
+        fillMode: Image.PreserveAspectCrop
+    }
 
-        onFrameChanged: {
-            if (currentFrame === frameCount - 1) {
-                playing = false;
+    VideoOutput {
+        id: videoOutput
+        anchors.fill: parent
+        fillMode: VideoOutput.PreserveAspectCrop
+    }
+    
+    // This image is used to cover the video output once the video ends, so that we don't have a blank screen after the video finishes playing. It will be hidden while the video is playing.
+    Image {
+        id: endImage
+        source: Qt.resolvedUrl("images/end.png")
+        anchors.fill: parent
+        fillMode: Image.PreserveAspectCrop
+        visible: false
+    }
+
+    MediaPlayer {
+        id: player
+        source: Qt.resolvedUrl("videos/steamgirl.mp4")
+
+        videoOutput: videoOutput
+        audioOutput: AudioOutput {
+            volume: 1
+        }
+
+        Components.onCompleted: {
+            player.play()
+        }
+        
+        // When the video is done, show the end image
+        onMediaStatusChanged: {
+            if (player.mediaStatus === MediaPlayer.EndOfMedia) {
+                endImage.visible = true
             }
         }
     }
 
-    Audio {
-        id: playSound
-        source: "audio/steamgirl.mp3"
-        volume: 0.5
-        autoPlay: true
-Component.onCompleted: {
-        playSound.play()
-    }
-        onPlaybackStateChanged: {
-            if (playbackState === MediaPlayer.PlayingState) {
-
-                backgroundImage.playing = true;
-            }
-        }
-    }
 }
