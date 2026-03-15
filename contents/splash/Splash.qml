@@ -36,7 +36,7 @@ Rectangle {
 
     MediaPlayer {
         id: player
-        source: Qt.resolvedUrl("videos/steamgirl.mp4")
+        source: Qt.resolvedUrl("video/steamgirl.mp4")
 
         videoOutput: videoOutput
         audioOutput: AudioOutput {
