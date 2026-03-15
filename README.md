@@ -50,7 +50,7 @@ mv ~/"PATH_TO_THE_SPLASH_SCREEN_LOCATION"/ ~/.local/share/plasma/look-and-feel/
 
 ## To setup the Desktop delay so that the whole thing plays without instantly loading the desktop
 
-1. If you don't have a mkdir -p ~/.config/systemd/user/ use this command to make one
+1. If you don't have a ~/.config/systemd/user/ use this command to make one
 ```sh
 mkdir -p ~/.config/systemd/user/
 ```
@@ -127,6 +127,6 @@ https://github.com/user-attachments/assets/b78af2e6-8ebf-44e6-b227-ab5f8db7cd4f
 ```sh
 systemctl --user disable splash-delay.service
 
-rm -r -f ~/.local/share/plasma/look-and-feel/steam-girl-splash-theme/ ~/.config/systemd/user/plasma-workspace.target.wants/ ~/.config/systemd/user/timers.target.wants/ ~/.config/systemd/user/splash-delay.service
+rm -r -f ~/.local/share/plasma/look-and-feel/steam-girl-splash-theme/ ~/.config/systemd/user/plasma-workspace.target.wants/splash-delay.service/ ~/.config/systemd/user/timers.target.wants/ ~/.config/systemd/user/splash-delay.service
 ```
 
