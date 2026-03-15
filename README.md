@@ -53,7 +53,7 @@ nano ~/.config/systemd/user/splash-delay.service
 
 
 
-3.Add To Nano Config
+3.Add To Nano Config (DO NOT USE TILL ISSUE IS FULLY RESLOVED)
 ```sh
 [Unit]
 Description=Wait for Splash Animation
