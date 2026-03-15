@@ -65,7 +65,7 @@ StartLimitIntervalSec=10
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/sleep 10 #the number here is for how long to wait before loading the desktop environment the whole video is 9 seconds but I set it to 10 to be safe
+ExecStart=/usr/bin/sleep 10
 RemainAfterExit=yes
 
 
