@@ -23,7 +23,7 @@ But there will be a Plasma 6 Version in devlopment in the future for all you Pla
 ## IMPORANT
 I couldn't figure out how to add a delay to the Splash Screen code to prevent the Desktop from loading instantly but I did figure out how to force delay the plasma 5 desktop using a startup command.
 
-### Discovered a BUG with the DELAY SCRIPT SPAMMING SYSLOG LOGS please see
+### Discovered a BUG with the DELAY SCRIPT SPAMMING SYSLOG LOGS
 
 > 3/14/26 9:49pm Should be resovled if Issue persist Please Vist Issues for updates and patch fixes on the problem
 
