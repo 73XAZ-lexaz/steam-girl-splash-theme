@@ -1,5 +1,5 @@
 
-## All Rights to the image, video and audio in this project belong to Valve Corporation
+## All Rights to the image, video and audio in this project belong to *Valve Corporation*
 
 #### Please do not sell or distribute for legal resons
 
@@ -16,6 +16,13 @@
 > **P.S.** I'm new to Linux Devlopment this is my first project<br>
 
 But there will be a Plasma 6 Version in devlopment in the future for all you Plasma 6 Users :3
+
+<div>&nbsp;</div>
+
+## WIP Features
+Adding a way to **interupt** the Splash Screen if the desktop is loaded and if theres a **user input**<br>
+<BR>Adding a **easier way to adjust the music volume** of the splash screen using a **command** (**Also works to mute it for people that don't like it**)
+
 
 
 <div>&nbsp;</div>
