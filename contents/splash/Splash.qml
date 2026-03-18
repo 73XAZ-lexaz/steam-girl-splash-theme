@@ -6,16 +6,17 @@ Rectangle {
     id: root
     height: Screen.height
     width: Screen.width
-    color: "black"
+    color:"black"
 
-// This images loads the first frame of the video, so that we don't have a blank screen while the video is loading. It will be hidden once the video starts playing.
+    property int stage
+
+    // This images loads the first frame of the video, so that we don't have a blank screen while the video is loading. It will be hidden once the video starts playing.
     Image {
         id: backgroundImage
         source: "images/start.png"
         anchors.fill: parent
+        // This prevents the 16:10 picture from being stretched to fit the 16:9 screen, and instead crops it to fill the screen while maintaining its aspect ratio.
         fillMode: Image.PreserveAspectCrop
-// This prevents the 16:10 picture from being stretched to fit the 16:9 screen, and instead crops it to fill the screen while maintaining its aspect ratio.
-        visible: player.playbackState !== MediaPlayer.PlayingState
     }
 
     VideoOutput {
@@ -24,24 +25,27 @@ Rectangle {
         fillMode: VideoOutput.PreserveAspectCrop
         source: player
     }
-// This image is used to cover the video output once the video ends, so that we don't have a blank screen after the video finishes playing. It will be hidden while the video is playing.
+    // This image is used to cover the video output once the video ends, so that we don't have a blank screen after the video finishes playing. It will be hidden while the video is playing.
     Image {
         id: endImage
         source: "images/end.png"
         anchors.fill: parent
         fillMode: Image.PreserveAspectCrop
-        visible: player.status === MediaPlayer.EndOfMedia
+        visible: false
     }
 
     MediaPlayer {
         id: player
         source: "video/steamgirl.mp4"
-        autoPlay: true
         volume: 1.0
 
+        Component.onCompleted: {
+            player.play()
+        }
+    // When the video is done, show the end image
         onStatusChanged: {
             if (status === MediaPlayer.EndOfMedia) {
-                console.log("Video finished")
+                endImage.visible = true
             }
         }
     }
