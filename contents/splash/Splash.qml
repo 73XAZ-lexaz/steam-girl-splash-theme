@@ -8,11 +8,13 @@ Rectangle {
     width: Screen.width
     color: "black"
 
+// This images loads the first frame of the video, so that we don't have a blank screen while the video is loading. It will be hidden once the video starts playing.
     Image {
         id: backgroundImage
         source: "images/start.png"
         anchors.fill: parent
         fillMode: Image.PreserveAspectCrop
+// This prevents the 16:10 picture from being stretched to fit the 16:9 screen, and instead crops it to fill the screen while maintaining its aspect ratio.
         visible: player.playbackState !== MediaPlayer.PlayingState
     }
 
@@ -22,7 +24,7 @@ Rectangle {
         fillMode: VideoOutput.PreserveAspectCrop
         source: player
     }
-
+// This image is used to cover the video output once the video ends, so that we don't have a blank screen after the video finishes playing. It will be hidden while the video is playing.
     Image {
         id: endImage
         source: "images/end.png"
