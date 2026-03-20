@@ -43,7 +43,7 @@ Rectangle {
             player.play()
         }
     // When the video is done, show the end image
-        onMediaStatusChanged: {
+        onStatusChanged: {
             if (status === MediaPlayer.EndOfMedia) {
                 endImage.visible = true
             }
