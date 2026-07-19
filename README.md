@@ -11,10 +11,13 @@
 
 <div>&nbsp;</div>
 
-## WIP Features
+## Known issue
 
-Adding a way to **interupt** the Splash Screen if the desktop is loaded and if theres a **user input**<br>
-<BR>Adding a **easier way to adjust the music volume** of the splash screen using a **command** (**Also works to mute it for people that don't like it**)
+<div>&nbsp;</div>
+
+There is a issue If you download using the ZIP file it adds a -main at the end of the file which causes a issue for some reason but the Git Clone works fine 
+
+
 
 <div>&nbsp;</div>
 
